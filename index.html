@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人脸优先的图像压缩</title>
+</head>
+<body>
+    <h1>📸 人脸优先的图像压缩</h1>
+    <p><strong>杨安然</strong> · 北京师范大学 人工智能学院</p>
+    
+    <h2>🎯 研究背景</h2>
+    <p>传统JPEG等压缩标准对所有区域“一刀切”，导致人脸区域在压缩后严重失真。</p>
+    <p>本研究聚焦于“语义保全”图像压缩，在有限比特预算内，对人脸区域优先保护，对背景区域更大程度压缩。</p>
+    
+    <h2>⚙️ 核心方法</h2>
+    <p><strong>三步流程：</strong> HOG人脸检测 → 二值掩膜生成 → 差异化压缩</p>
+    <ul>
+        <li><strong>① 多尺度自适应：</strong> 实现1%~70%宽范围人脸检测</li>
+        <li><strong>② 关键点辅助校准：</strong> 68点凸包精准定位，过滤侧脸误检</li>
+        <li><strong>③ 差异化量化：</strong> 人脸Q=95，背景Q=5</li>
+    </ul>
+    
+    <h2>📊 实验结果</h2>
+    <ul>
+        <li>检测率从85.6%提升至95.2%</li>
+        <li>侧脸检测成功率从72.6%提升至92.4%</li>
+        <li>人脸区域PSNR平均提升1.6 dB</li>
+    </ul>
+    
+    <h2>🔗 相关资源</h2>
+    <p><a href="#">LaTeX海报源码</a> · <a href="#">项目报告</a></p>
+    
+    <hr>
+    <p style="color: gray; font-size: 14px;">北京师范大学 · 2026年6月</p>
+</body>
+</html>
